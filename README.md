@@ -49,6 +49,11 @@ This tool lets us make different builds for different versions of our app. Among
 flutter pub run flutter_flavor:main
 flutter run --dart-define=env="development"
 
+flutter_flavorizr
+
+flutter pub run flutter_flavorizr
+flutter run --flavor dev -t lib/main-dev.dart
+
 https://pub.dev/packages/bloc - 
     https://github.com/giantsol/Blue-Diary/blob/master/lib/data/ToDoRepositoryImpl.dart
 

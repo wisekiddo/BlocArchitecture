@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_flavor/flutter_flavor.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key, required this.title}) : super(key: key);
@@ -20,7 +19,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = FlavorConfig.instance.variables["counter"];
+  int _counter = 0;
   void _incrementCounter() {
     setState(() {
       // This call to setState tells the Flutter framework that something has

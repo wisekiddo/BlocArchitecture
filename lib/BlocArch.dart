@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'screens/Home.dart';
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+class BlocArch extends StatelessWidget {
+  const BlocArch({Key? key}) : super(key: key);
 
   // This widget is the root of your application.
   @override
