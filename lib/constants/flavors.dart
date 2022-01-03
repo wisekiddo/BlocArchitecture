@@ -1,3 +1,5 @@
+import 'package:flutter/foundation.dart';
+
 enum Flavor {
   PROD,
   UAT,
@@ -8,28 +10,28 @@ extension FlavorName on Flavor {
   String get name => toString().split('.').last;
 }
 
-abstract class _Options{
+abstract class _Flavor{
   String get baseUrl;
   String get title;
 }
-class _Prod extends _Options{
+class _Prod extends _Flavor{
   @override
   String get baseUrl => '';
   @override
-  String get title => '';
+  String get title => 'Bloc Prod';
 }
-class _Uat extends _Options{
+class _Uat extends _Flavor{
   @override
   String get baseUrl => '';
   @override
-  String get title => '';
+  String get title => 'Bloc Uat';
 }
 
-class _Dev extends _Options{
+class _Dev extends _Flavor{
   @override
   String get baseUrl => '';
   @override
-  String get title => 'Block UAT';
+  String get title => 'Bloc Dev';
 }
 
 
@@ -37,21 +39,9 @@ class Environment {
   static Flavor? appFlavor;
 
   static String get name => appFlavor?.name ?? '';
+  static Flavor valueOf(String value) => Flavor.values.where((e) => describeEnum(e) == value).first;
 
-  static String get title {
-    switch (appFlavor) {
-      case Flavor.PROD:
-        return 'Bloc';
-      case Flavor.UAT:
-        return 'Bloc UAT';
-      case Flavor.DEV:
-        return 'Bloc DEV';
-      default:
-        return 'title';
-    }
-  }
-
-  static _Options get options {
+  static _Flavor get flavor {
     switch (appFlavor) {
       case Flavor.PROD:
         return _Prod();

@@ -1,3 +1,4 @@
+import 'package:bloc/constants/flavors.dart';
 import 'package:flutter/material.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -43,7 +44,7 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
-        title: Text(widget.title),
+        title: Text(widget.title + " " + Environment.flavor.title),
       ),
       body: Center(
         // Center is a layout widget. It takes a single child and positions it

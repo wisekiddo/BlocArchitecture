@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'flavors.dart';
-import 'screens/Home.dart';
+import 'constants/flavors.dart';
+import 'pages/Home.dart';
 
 class BlocArch extends StatelessWidget {
   const BlocArch({Key? key}) : super(key: key);
@@ -10,7 +10,7 @@ class BlocArch extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: Environment.options.title,
+      title: Environment.flavor.title,
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -23,7 +23,7 @@ class BlocArch extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(title: 'Flutter Architecture'),
     );
   }
 }

@@ -45,16 +45,12 @@ https://pub.dev/packages/splashscreen
 
 ### Flutter Flavor
 
-This tool lets us make different builds for different versions of our app. Among other things, we could make a flavor for development, a flavor for production, and another flavor for a demo of the app. In this way, we can make different flavors of our apps before we put them on the App Store and Google Play. This way, we can have different versions of our apps before we put them on these stores and apps.
-flutter pub run flutter_flavor:main
-flutter run --dart-define=env="development"
+flutter_flavorizr - This tool will create different builds for different environment of our app. Among other things, we could make a flavor for development, a flavor for production, and another flavor for a demo of the app. We can have different versions of our apps before we put them on these stores and apps.
+    flutter pub run flutter_flavorizr
+    flutter run --flavor dev -t lib/main-dev.dart
 
-flutter_flavorizr
-
-flutter pub run flutter_flavorizr
-flutter run --flavor dev -t lib/main-dev.dart
+### Flutter Bloc
 
 https://pub.dev/packages/bloc - 
     https://github.com/giantsol/Blue-Diary/blob/master/lib/data/ToDoRepositoryImpl.dart
 
-https://pub.dev/packages/flutter_flavor
