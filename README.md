@@ -47,8 +47,8 @@ https://pub.dev/packages/splashscreen
 
 flutter_flavorizr - This tool will create different builds for different environment of our app. Among other things, we could make a flavor for development, a flavor for production, and another flavor for a demo of the app. We can have different versions of our apps before we put them on these stores and apps.
     flutter pub run flutter_flavorizr
-    flutter run --flavor dev -t lib/main-dev.dart
-
+    flutter run --flavor dev -t lib/main.dart --dart-define=env="dev"
+    flutter run --flavor dev --dart-define=env="dev"
 ### Flutter Bloc
 
 https://pub.dev/packages/bloc - 
