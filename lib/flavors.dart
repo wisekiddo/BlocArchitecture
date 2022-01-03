@@ -8,9 +8,31 @@ extension FlavorName on Flavor {
   String get name => toString().split('.').last;
 }
 
-class _Options{
-
+abstract class _Options{
+  String get baseUrl;
+  String get title;
 }
+class _Prod extends _Options{
+  @override
+  String get baseUrl => '';
+  @override
+  String get title => '';
+}
+class _Uat extends _Options{
+  @override
+  String get baseUrl => '';
+  @override
+  String get title => '';
+}
+
+class _Dev extends _Options{
+  @override
+  String get baseUrl => '';
+  @override
+  String get title => 'Block UAT';
+}
+
+
 class Environment {
   static Flavor? appFlavor;
 
@@ -26,6 +48,19 @@ class Environment {
         return 'Bloc DEV';
       default:
         return 'title';
+    }
+  }
+
+  static _Options get options {
+    switch (appFlavor) {
+      case Flavor.PROD:
+        return _Prod();
+      case Flavor.UAT:
+        return _Uat();
+      case Flavor.DEV:
+        return _Dev();
+      default:
+        return _Prod();
     }
   }
 }

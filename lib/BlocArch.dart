@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'flavors.dart';
 import 'screens/Home.dart';
 
 class BlocArch extends StatelessWidget {
@@ -9,7 +10,7 @@ class BlocArch extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: Environment.options.title,
       theme: ThemeData(
         // This is the theme of your application.
         //

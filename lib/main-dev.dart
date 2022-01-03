@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'BlocArch.dart';
-import 'app.dart';
 import 'flavors.dart';
 
 void main() {
