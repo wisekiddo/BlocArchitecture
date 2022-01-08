@@ -1,6 +1,11 @@
-# bloc
+# Flutter BLoC Architecture Template
 
-A Flutter Bloc Architecture
+This serves as a Template for Flutter BLoC Architecture. It also app release ready and setup to be full-pledge template. Customisable Features added are:
+> * Environment Flavours for both android and iOS
+> * Native Splash Screen
+> * sdfsdfsd
+> * sdf
+> * 
 
 ## Getting Started
 
@@ -45,10 +50,25 @@ https://pub.dev/packages/splashscreen
 
 ### Flutter Flavor
 
-flutter_flavorizr - This tool will create different builds for different environment of our app. Among other things, we could make a flavor for development, a flavor for production, and another flavor for a demo of the app. We can have different versions of our apps before we put them on these stores and apps.
+flutter\_flavorizr - This tool will allow the app to have different builds for different environment of our app with a set of flavor for development, a flavor for production, and another flavor for a user acceptance test. In this way we can have different versions of our apps before we put them in the app stores to be published.
+
+We did minor changes on the implementation by removing the redundunt main.dart for every flavor
+
     flutter pub run flutter_flavorizr
     flutter run --flavor dev -t lib/main.dart --dart-define=env="dev"
     flutter run --flavor dev --dart-define=env="dev"
+    
+### Flutter Splash Screen
+flutter\_native\_splash - Is a tool that auto generate a native implementation of Splash Screen.
+To start with the customisation you may need to follow the setup found in the library page: [https://pub.dev/packages/flutter\_native\_splash](https://pub.dev/packages/flutter_native_splash).
+You can also directly edit pubspec.yaml for the existing implementation just look for flutter\_native\_splash: part of the scripts below are the commands on activating and disabling the setup
+
+Activate the setup
+
+	flutter pub run flutter_native_splash:create
+Remove the setup
+
+	flutter pub run flutter_native_splash:remove
 ### Flutter Bloc
 
 https://pub.dev/packages/bloc - 
