@@ -50,14 +50,27 @@ https://pub.dev/packages/splashscreen
 
 ### Flutter Flavor
 
-flutter\_flavorizr - This tool will allow the app to have different builds for different environment of our app with a set of flavor for development, a flavor for production, and another flavor for a user acceptance test. In this way we can have different versions of our apps before we put them in the app stores to be published.
+flutter\_flavorizr - This tool will allow the app to have different builds for different environment of our app with a set of flavor for development, a flavor for production, and another flavor for a user acceptance test. In this way we can have different versions of our apps before we put them in the application stores to be published.
 
-We did minor changes on the implementation by removing the redundunt main.dart for every flavor
+To run different environement
 
-    flutter pub run flutter_flavorizr
-    flutter run --flavor dev -t lib/main.dart --dart-define=env="dev"
-    flutter run --flavor dev --dart-define=env="dev"
+Production:
+> flutter run --flavor prod --dart-define=env="prod"
+
+Developer:
+> flutter run --flavor dev --dart-define=env="dev"
+
+UAT:
+> flutter run --flavor uat --dart-define=env="uat"
+
+We did minor changes on the implementation by removing the redundunt main.dart for every flavor and configure reading the flavors in lib -> constants -> flavors.dart
+
+Warning: running the command below will restore the library implementation but this will allow you to modify your own app id. But if you want the existing implementation you need to be mindful when applying the command.
+
+>     flutter pub run flutter_flavorizr
     
+For more detail on the library visit: [https://pub.dev/packages/flutter_flavorizr
+](https://pub.dev/packages/flutter_flavorizr)    
 ### Flutter Splash Screen
 flutter\_native\_splash - Is a tool that auto generate a native implementation of Splash Screen.
 To start with the customisation you may need to follow the setup found in the library page: [https://pub.dev/packages/flutter\_native\_splash](https://pub.dev/packages/flutter_native_splash).
